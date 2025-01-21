@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  modules: ['@nuxt/eslint', '@nuxtjs/prismic', '@nuxtjs/tailwindcss', '@nuxt/fonts'],
+  modules: ['@nuxt/eslint', '@nuxtjs/prismic', '@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/icon'],
 
   prismic: {
     endpoint: apiEndpoint || repositoryName,
