@@ -21,8 +21,8 @@
 				"type": "Link",
 				"value": [
 					{
-						"__TYPE__": "LinkContent",
 						"key": "88afc9ae-a479-41ea-864b-e0fd8f5b57c4",
+						"__TYPE__": "LinkContent",
 						"value": {
 							"__TYPE__": "ExternalLink",
 							"url": "http://google.com",
@@ -30,8 +30,8 @@
 						}
 					},
 					{
-						"__TYPE__": "LinkContent",
 						"key": "595948b9-57d6-4828-88f5-167026e38174",
+						"__TYPE__": "LinkContent",
 						"value": {
 							"__TYPE__": "ExternalLink",
 							"url": "https://google.com",

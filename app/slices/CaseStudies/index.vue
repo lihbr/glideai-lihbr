@@ -34,16 +34,16 @@ const caseStudies = computed(() => {
         class="group relative grid gap-4 md:gap-8 opacity-85 transition-opacity will-change-auto duration-300 hover:cursor-pointer hover:opacity-100 md:grid-cols-2 lg:grid-cols-3"
       >
         <div class="col-span-1 flex flex-col justify-center gap-4">
-          <PrismicText :field="caseStudy.data.company" wrapper="h3" class="text-4xl" />
-          <PrismicRichText :field="caseStudy.data.description" wrapper="div" class="max-w-md" />
+          <PrismicText :field="caseStudy.data?.company" wrapper="h3" class="text-4xl" />
+          <PrismicRichText :field="caseStudy.data?.description" wrapper="div" class="max-w-md" />
           <PrismicLink :document="caseStudy" class="z-10 after:absolute after:inset-0 hover:underline">
-            Read <PrismicText :field="caseStudy.data.company" /> case study
+            Read <PrismicText :field="caseStudy.data?.company" /> case study
           </PrismicLink>
         </div>
         <div class="relative lg:col-span-2" :class="index % 2 && 'md:-order-1'">
           <div class="imageGlow -bottom-8 -left-4 bg-sky-500" />
           <div class="imageGlow -right-4 -top-8 bg-teal-500" />
-          <PrismicImage :field="caseStudy.data.cover" class="z-20 scale-[.98] rounded-xl transition-transform will-change-transform duration-300 group-hover:scale-100" />
+          <PrismicImage :field="caseStudy.data?.cover" class="z-20 scale-[.98] rounded-xl transition-transform will-change-transform duration-300 group-hover:scale-100" />
         </div>
       </article>
     </div>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import type { Content } from "@prismicio/client";
+import { isFilled, type Content } from "@prismicio/client";
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -77,7 +77,7 @@ onMounted(() => {
         </figure>
         <PrismicText :field="slice.primary.subheading" wrapper="h3" class="mt-6 text-2xl font-normal" />
         <PrismicRichText :field="slice.primary.body" wrapper="div" class="prose prose-invert mt-4 max-w-xl" />
-        <PrismicLink :field="slice.primary.cta" class="buttonLink mt-6" />
+        <PrismicLink v-if="$prismic.isFilled.link(slice.primary.cta)" :field="slice.primary.cta" class="buttonLink mt-6" />
       </div>
       <PrismicImage
         :field="slice.primary.image"
