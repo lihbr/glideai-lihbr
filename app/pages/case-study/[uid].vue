@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import { components } from '~/slices'
+import { components } from "~/slices";
 
-const prismic = usePrismic()
-const { data: page } = await useAsyncData('index', () =>
-  prismic.client.getByUID('page', 'home', {
-    fetchLinks: [
-      "case_study.company",
-      "case_study.description",
-      "case_study.cover",
-    ]
-  })
-)
+const prismic = usePrismic();
+const route = useRoute();
+const { data: page } = await useAsyncData(
+  `[case_study-uid-${route.params.uid}]`,
+  () => prismic.client.getByUID("case_study", route.params.uid as string),
+);
 
 useSeoMeta({
   title: page.value?.data.meta_title,
@@ -20,7 +16,6 @@ useSeoMeta({
   ogImage: computed(() => prismic.asImageSrc(page.value?.data.meta_image)),
 });
 </script>
-
 
 <template>
   <SliceZone
