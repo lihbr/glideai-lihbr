@@ -36,6 +36,7 @@ onMounted(() => {
         rotation: "+=180",
         color: "#ffffff",
         scale: 1,
+        delay: -2,
         duration: 0.6,
         stagger: {
           amount: 3,
@@ -69,6 +70,7 @@ onMounted(() => {
         rotation: "+=180",
         color: "#ffffff",
         scale: 1,
+        delay: -2,
         duration: 0.6,
         stagger: {
           amount: 3,

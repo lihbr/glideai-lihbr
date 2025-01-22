@@ -25,7 +25,7 @@ onMounted(() => {
 
   tl.fromTo(".hero__heading", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.4 });
   tl.fromTo(".hero__body", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2 }, "-=0.6");
-  tl.fromTo(".hero__ctas", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.3 }, "-=0.8");
+  tl.fromTo(".hero__cta", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.3 }, "-=0.8");
   tl.fromTo(".hero__image", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1.3 }, "+=0.3");
   tl.fromTo(".hero__glow", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.8 }, "-=1");
 
@@ -66,7 +66,7 @@ onMounted(() => {
       <GlideGrid />
       <PrismicText
         :field="slice.primary.heading"
-        class="hero__heading mx-auto max-w-3xl text-balance text-5xl font-medium"
+        class="hero__heading mx-auto max-w-3xl text-balance text-5xl md:text-7xl font-medium"
         wrapper="h1"
       />
       <PrismicText
@@ -74,15 +74,15 @@ onMounted(() => {
         class="hero__body mx-auto mt-6 max-w-md text-balance text-gray-300"
         wrapper="p"
       />
-      <div class="hero__ctas flex flex-wrap gap-8 justify-center mt-8">
+      <div class="flex flex-wrap gap-8 justify-center mt-8">
         <PrismicLink
           v-for="cta in slice.primary.ctas"
           :key="cta.key"
-          class="buttonLink"
+          class="hero__cta buttonLink"
           :field="cta"
         />
       </div>
-      <div class="hero__image glassContainer mt-16 w-fit">
+      <div class="hero__image glassContainer mt-16 w-fit opacity-0">
         <div class="hero__glow hero__glow--one absolute left-1/3 top-0 -z-10 h-2/3 w-2/3 bg-sky-700/50 blur-3xl md:blur-[120px] filter mix-blend-screen" />
         <div class="hero__glow hero__glow--two absolute left-0 top-1/3 -z-10 h-2/3 w-2/3 bg-teal-600/50 blur-3xl md:blur-[120px] filter mix-blend-screen" />
         <PrismicImage
