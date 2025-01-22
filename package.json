@@ -18,6 +18,7 @@
     "@nuxt/eslint": "^0.7.5",
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/icon": "^1.10.3",
+    "@nuxthub/core": "^0.8.14",
     "@nuxtjs/prismic": "^4.0.0",
     "@nuxtjs/tailwindcss": "^6.13.1",
     "@slicemachine/adapter-nuxt": "^0.3.65",
@@ -25,7 +26,8 @@
     "concurrently": "^9.1.2",
     "eslint": "^9.18.0",
     "nuxt": "^3.15.2",
-    "slice-machine-ui": "^2.12.2"
+    "slice-machine-ui": "^2.12.2",
+    "wrangler": "^3.103.2"
   },
   "dependencies": {
     "gsap": "^3.12.7"
